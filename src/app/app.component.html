@@ -1,9 +1,29 @@
 <div>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">All dishes from the restaurant</a></li>
-    <li><a href="#">Meal details</a></li>
-    <li><a href="#">Shopping basket</a></li>
+    <li
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact:true}">
+    <a routerLink="/">Home</a>
+  </li>
+    <li
+    routerLinkActive="active">
+    <a routerLink="showall">All meals from the restaurant</a>
+  </li>
+    <li
+    routerLinkActive="active">
+    <a routerLink="showone">Meal details</a>
+  </li>
+    <li
+    routerLinkActive="active">
+    <a routerLink="basket">Shopping basket</a>
+  </li>
+    <li
+    routerLinkActive="active" style="float:right">
+    <a routerLink="auth">Sign out</a>
+  </li>
   </ul>
 </div>
-<app-home></app-home>
+<div>
+  <router-outlet></router-outlet>
+</div>
+

@@ -3,11 +3,11 @@ ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #fd8e44;
 }
 li {
   float: left;
-  border-right:1px solid #bbb;
+  border-right:1px solid #853500;
 }
 
 li:last-child {
@@ -18,7 +18,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   padding: 14px 16px;
   text-decoration: none;
 }
