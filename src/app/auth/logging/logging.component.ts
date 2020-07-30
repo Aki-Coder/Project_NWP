@@ -12,4 +12,10 @@ export class LoggingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isLoginMode = true;
+
+  onSwitchMode(){
+    this.isLoginMode = !this.isLoginMode;
+  }
+
 }
