@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
 import { RoutingComponent } from './routing/routing/routing.component';
@@ -12,6 +11,8 @@ import { MealComponent } from './meal/meal/meal.component';
 import { BasketComponent } from './shopping_basket/basket/basket.component';
 import { SignoutComponent } from './auth2/signout/signout.component';
 import { AppRouting } from './app.routing';
+
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,12 +25,15 @@ import { AppRouting } from './app.routing';
     MealsComponent,
     MealComponent,
     BasketComponent,
-    SignoutComponent
+    SignoutComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRouting,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [],

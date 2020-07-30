@@ -7,9 +7,9 @@ form {
 }
 
 input[type=email], input[type=password] {
-  width: 25%;
+  width: 35%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 15px 0px;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -19,7 +19,8 @@ button {
   background-color: #ff5c33;
   color: white;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin-right: 50px;
+  margin-left: 50px;
   border: none;
   cursor: pointer;
   width: 25%;
@@ -27,4 +28,11 @@ button {
 
 button:hover {
   opacity: 0.8;
+}
+
+.formStyle{
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
 }
