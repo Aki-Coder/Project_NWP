@@ -38,9 +38,9 @@ button:hover {
 }
 
 .alert{
-  padding: 10px;
+  padding: 8px;
   margin-left: 25%;
-  margin-right: 20%;
+  margin-right: 25%;
   width: 50%;
   height: 50%;
   background-color: #f44336;

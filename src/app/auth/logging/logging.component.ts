@@ -33,13 +33,14 @@ export class LoggingComponent implements OnInit {
     if(this.isLoginMode){
 
     }else{
-      this.authService.singup(email, password).subscribe(resData=>{
-        console.log(resData);
-        this.isLoading = false;
-      }, error =>{
-        console.log(error);
-        this.error = "An error ocured";
-        this.isLoading = false;
+      this.authService.singup(email, password).subscribe(
+        resData=>{
+          console.log(resData);
+          this.isLoading = false;
+      }, errorMessage =>{
+          console.log(errorMessage);
+          this.error = errorMessage;
+          this.isLoading = false;
       });
     }
 
