@@ -13,6 +13,7 @@ import { SignoutComponent } from './auth2/signout/signout.component';
 import { AppRouting } from './app.routing';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinner.component';
 
 
 
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     MealComponent,
     BasketComponent,
     SignoutComponent,
+    LoadingSpinnerComponent
 
 
   ],

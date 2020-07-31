@@ -1,7 +1,15 @@
 <div>
   <h2>Login Form</h2>
   <div>
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" class="formStyle">
+    <div *ngIf="error" class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      <strong>Danger!</strong> <p>{{error}}</p>
+    </div>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <br>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="formStyle" >
       <label for="email"><b>Email adr :</b>
       </label>
       <input
