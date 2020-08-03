@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
 import {throwError, Subject} from 'rxjs';
 import { User } from './user-model';
+import { Router } from '@angular/router';
 
 
 export interface AuthResponseData{
@@ -23,7 +24,8 @@ export class AuthService{
 
   user = new Subject<User>();
 
-  constructor(private http : HttpClient){}
+  constructor(private http : HttpClient,
+              private route : Router){}
 
   singup(email : string, password: string){
     return this.http.post<AuthResponseData>
@@ -59,6 +61,11 @@ export class AuthService{
         resData.idToken ,
         +resData.expiresIn);
   }));
+  }
+
+  logout(){
+    this.user.next(null);
+    this.route.navigate(['auth']);
   }
 
 
