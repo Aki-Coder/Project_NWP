@@ -3,23 +3,27 @@
     <li
     routerLinkActive="active"
     [routerLinkActiveOptions]="{exact:true}">
-    <a routerLink="/">Home</a>
+    <a routerLink="/" >Home</a>
   </li>
     <li
-    routerLinkActive="active">
+    routerLinkActive="active" *ngIf="isAutenticicated">
     <a routerLink="showall">All meals from the restaurant</a>
   </li>
     <li
-    routerLinkActive="active">
+    routerLinkActive="active" *ngIf="isAutenticicated">
     <a routerLink="showone">Meal details</a>
   </li>
     <li
-    routerLinkActive="active">
+    routerLinkActive="active" *ngIf="isAutenticicated">
     <a routerLink="basket">Shopping basket</a>
   </li>
+  <li routerLink="active" style="float:right" *ngIf="!isAutenticicated">
+    <a routerLink = "auth">Authencitaion</a>
+
+  </li>
     <li
-    routerLinkActive="active" style="float:right">
-    <a routerLink="auth">Sign out</a>
+    routerLinkActive="active" style="float:right" *ngIf="isAutenticicated">
+    <a routerLink="">Logout</a>
   </li>
   </ul>
 </div>

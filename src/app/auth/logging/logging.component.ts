@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm} from '@angular/forms';
 import { AuthService, AuthResponseData } from './logging.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logging',
@@ -10,7 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class LoggingComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+              private route : Router) { }
 
   ngOnInit(): void {
   }
@@ -43,6 +45,7 @@ export class LoggingComponent implements OnInit {
       resData=>{
         console.log(resData);
         this.isLoading = false;
+        this.route.navigate(['/']);
     }, errorMessage =>{
         console.log(errorMessage);
         this.error = errorMessage;
