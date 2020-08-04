@@ -7,16 +7,23 @@ import { MealComponent } from './meal/meal/meal.component';
 import { BasketComponent } from './shopping_basket/basket/basket.component';
 import { SignoutComponent } from './auth2/signout/signout.component';
 import { LoggingComponent } from './auth/logging/logging.component';
+import { AuthGuard } from './auth/logging/logging.guard';
 
 
 
 const appRouters: Routes = [
-  {path: '', component:HomeComponent},
-  {path: 'showall', component:MealsComponent},
-  {path: 'showone', component:MealComponent},
-  {path: 'basket', component:BasketComponent},
-  {path: 'signout', component:SignoutComponent},
-  {path: 'auth', component: LoggingComponent}
+  {path: '',
+  component:HomeComponent},
+  {path: 'showall',
+  component:MealsComponent, canActivate: [AuthGuard]},
+  {path: 'showone',
+  component:MealComponent},
+  {path: 'basket',
+  component:BasketComponent},
+  {path: 'signout',
+  component:SignoutComponent},
+  {path: 'auth',
+  component: LoggingComponent}
 ]
 
 

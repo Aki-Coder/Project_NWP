@@ -10,7 +10,7 @@ import { MealsComponent } from './all_meals/meals/meals.component';
 import { MealComponent } from './meal/meal/meal.component';
 import { BasketComponent } from './shopping_basket/basket/basket.component';
 import { SignoutComponent } from './auth2/signout/signout.component';
-import { AppRouting } from './app.routing';
+import { AppRouting } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinner.component';
