@@ -14,6 +14,7 @@ import { AppRouting } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinner.component';
+import { FooterComponent } from './footer/footer/footer.component';
 
 
 
@@ -27,7 +28,8 @@ import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinn
     MealComponent,
     BasketComponent,
     SignoutComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    FooterComponent
 
 
   ],

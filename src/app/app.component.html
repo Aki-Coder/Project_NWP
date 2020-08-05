@@ -6,20 +6,19 @@
     <a routerLink="/" >Home</a>
   </li>
     <li
-    routerLinkActive="active" *ngIf="isAutenticicated">
-    <a routerLink="showall">All meals from the restaurant</a>
+    routerLinkActive="active">
+    <a routerLink="showall"  *ngIf="isAutenticicated">All meals from the restaurant</a>
   </li>
     <li
-    routerLinkActive="active" *ngIf="isAutenticicated">
-    <a routerLink="showone">Meal details</a>
+    routerLinkActive="active">
+    <a routerLink="showone"  *ngIf="isAutenticicated">Meal details</a>
   </li>
     <li
-    routerLinkActive="active" *ngIf="isAutenticicated">
-    <a routerLink="basket">Shopping basket</a>
+    routerLinkActive="active" >
+    <a routerLink="basket" *ngIf="isAutenticicated">Shopping basket</a>
   </li>
-  <li routerLink="active" style="float:right" *ngIf="!isAutenticicated">
-    <a routerLink = "auth">Authencitaion</a>
-
+  <li routerLink="active" style="float:right">
+    <a routerLink = "auth"  *ngIf="!isAutenticicated">Authencitaion</a>
   </li>
     <li
     routerLinkActive="active" style="float:right" *ngIf="isAutenticicated">
@@ -30,4 +29,8 @@
 <div>
   <router-outlet></router-outlet>
 </div>
+
+  <app-footer></app-footer>
+
+
 

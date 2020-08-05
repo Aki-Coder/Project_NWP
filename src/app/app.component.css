@@ -7,6 +7,7 @@ ul{
 }
 li {
   float: left;
+  margin: auto;
   border-right:1px solid #853500;
 }
 
@@ -16,9 +17,9 @@ li:last-child {
 
 li a {
   display: block;
-  color: white;
+  color: #853500;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   padding: 14px 16px;
   text-decoration: none;
 }

@@ -1,5 +1,5 @@
 <div>
-  <h2>Login Form</h2>
+  <p> <b>Fill out the form</b></p>
   <div>
     <div *ngIf="error" class="alert">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -9,28 +9,34 @@
       <app-loading-spinner></app-loading-spinner>
     </div>
     <br>
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="formStyle" >
-      <label for="email"><b>Email adr :</b>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="formStyle">
+      <label for="email"><b style="color: #853500;">Email :</b>
       </label>
-      <input
+      <div class="col-75">
+        <input
         type="email"
         id="email"
         ngModel name ="email"
         placeholder="Enter Email"
         required
         email>
+      </div>
+
 
       <br>
 
-      <label for="password"><b>Password :</b>
+      <label for="password"><b style="color: #853500;">Password :</b>
       </label>
-      <input
+      <div class="col-75">
+        <input
         type="password"
         id="password"
         ngModel name = "password"
         placeholder="Enter Password"
         required
         minlength="6">
+      </div>
+
       <div>
         <button
           type="submit"
