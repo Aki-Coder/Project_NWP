@@ -13,7 +13,9 @@ import { AuthGuard } from './auth/logging/logging.guard';
 
 const appRouters: Routes = [
   {path: '',
-  component:HomeComponent},
+  redirectTo: 'home',
+  pathMatch: 'full'},
+  {path : 'home', component: HomeComponent},
   {path: 'showall',
   component:MealsComponent, canActivate: [AuthGuard]},
   {path: 'showone',
