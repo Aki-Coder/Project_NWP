@@ -1,51 +1,58 @@
-<div>
-  <p> <b>Fill out the form</b></p>
+
+<div id="slika" class="section">
+  <p><b>Fill out the form</b></p>
   <div>
     <div *ngIf="error" class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-      <p>{{error}}</p>
+      <span class="closebtn" onclick="this.parentElement.style.display='none';"
+        >&times;</span
+      >
+      <p>{{ error }}</p>
     </div>
     <div *ngIf="isLoading" style="text-align: center;">
       <app-loading-spinner></app-loading-spinner>
     </div>
-    <br>
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" class="formStyle">
-      <label for="email"><b style="color: #853500;">Email :</b>
-      </label>
+    <br />
+    <form
+      #authForm="ngForm"
+      (ngSubmit)="onSubmit(authForm)"
+      *ngIf="!isLoading"
+      class="formStyle"
+    >
+      <label for="email"><b style="color: #f9c784;">Email :</b> </label>
       <div class="col-75">
         <input
-        type="email"
-        id="email"
-        ngModel name ="email"
-        placeholder="Enter Email"
-        required
-        email>
+          type="email"
+          id="email"
+          ngModel
+          name="email"
+          placeholder="Enter Email"
+          required
+          email
+        />
       </div>
 
+      <br />
 
-      <br>
-
-      <label for="password"><b style="color: #853500;">Password :</b>
-      </label>
+      <label for="password"><b style="color: #f9c784;">Password :</b> </label>
       <div class="col-75">
         <input
-        type="password"
-        id="password"
-        ngModel name = "password"
-        placeholder="Enter Password"
-        required
-        minlength="6">
+          type="password"
+          id="password"
+          ngModel
+          name="password"
+          placeholder="Enter Password"
+          required
+          minlength="6"
+        />
       </div>
 
       <div>
-        <button
-          type="submit"
-          [disabled]="!authForm.valid">
-          {{isLoginMode ? 'Login' : 'Sign Up'}}
+        <button type="submit" [disabled]="!authForm.valid">
+          {{ isLoginMode ? "Login" : "Sign Up" }}
         </button>
         &nbsp;
         <button type="button" (click)="onSwitchMode()">
-          Switch to {{isLoginMode ? 'Sing Up' : 'Login'}}
+          Switch to {{ isLoginMode ? "Sing Up" : "Login" }}
         </button>
       </div>
     </form>

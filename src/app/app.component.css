@@ -1,14 +1,17 @@
 ul{
+  position: fixed;
+  top: 0;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #fd8e44;
+  background-color: #4e598c;
 }
 li {
   float: left;
   margin: auto;
-  border-right:1px solid #853500;
+
 }
 
 li:last-child {
@@ -17,18 +20,19 @@ li:last-child {
 
 li a {
   display: block;
-  color: #853500;
+  color: #f3f0d1;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #ff5c33;
+  background-color: #f9c784;
 }
 
 .active {
-  background-color: #ff5c33;
+  background-color: #f9c784;
 }
+
 

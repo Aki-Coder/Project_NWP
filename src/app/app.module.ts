@@ -9,12 +9,14 @@ import { LoggingComponent } from './auth/logging/logging.component';
 import { MealsComponent } from './all_meals/meals/meals.component';
 import { MealComponent } from './meal/meal/meal.component';
 import { BasketComponent } from './shopping_basket/basket/basket.component';
-import { SignoutComponent } from './auth2/signout/signout.component';
 import { AppRouting } from './app-routing.module';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinner.component';
 import { FooterComponent } from './footer/footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
+import { AuthGard } from './auth/logging/logging.guard';
+import { AuthService } from './auth/logging/logging.service';
 
 
 
@@ -27,9 +29,9 @@ import { FooterComponent } from './footer/footer/footer.component';
     MealsComponent,
     MealComponent,
     BasketComponent,
-    SignoutComponent,
     LoadingSpinnerComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
 
 
   ],
@@ -40,7 +42,10 @@ import { FooterComponent } from './footer/footer/footer.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [
+    AuthGard,
+    AuthService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
