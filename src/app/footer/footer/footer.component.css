@@ -8,3 +8,9 @@
   color: #f3f0d1;
   text-align: center;
 }
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}

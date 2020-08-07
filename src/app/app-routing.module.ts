@@ -13,7 +13,7 @@ import { AuthGard } from './auth/logging/logging.guard';
 const appRouters: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'showall', component: MealsComponent, canActivate: [AuthGard]},
+  { path: 'showall', component: MealsComponent},
   { path: 'showone', component: MealComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'auth', component: LoggingComponent },

@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
-import { RoutingComponent } from './routing/routing/routing.component';
+
 import { LoggingComponent } from './auth/logging/logging.component';
 import { MealsComponent } from './all_meals/meals/meals.component';
 import { MealComponent } from './meal/meal/meal.component';
@@ -24,7 +24,6 @@ import { AuthService } from './auth/logging/logging.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    RoutingComponent,
     LoggingComponent,
     MealsComponent,
     MealComponent,

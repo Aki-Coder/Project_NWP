@@ -18,7 +18,8 @@ form {
   border: 3px solid #f1f1f1;
   padding: 15px;
   position: fixed;
-
+  margin-top: 5%;
+  opacity: 0.8;
 
 }
 
@@ -29,13 +30,14 @@ input[type=email], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
   border-radius: 14px;
+  width: 100%;
 }
 
 
 button {
   background-color: #f9c784;
   border-radius: 14px;
-  color: #4e598c;
+  color: #2e3a72;
   padding: 12px 20px;
   margin-right: 50px;
   margin-left: 50px;
@@ -53,7 +55,7 @@ button:hover {
   margin-left: 25%;
   margin-right: 25%;
   background-color: black;
-  opacity: 0.8;
+
 
 }
 
@@ -61,8 +63,11 @@ button:hover {
   padding: 8px;
   margin-left: 25%;
   margin-right: 25%;
+  margin-top: 5%;
+  z-index: 1;
   background-color: #e47b74;
   color: white;
+  position: fixed;
 }
 
 .closebtn {
@@ -91,4 +96,14 @@ p{
   text-align: center;
   color: #4e598c;
 
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 15%;
+  border-radius: 50%;
 }

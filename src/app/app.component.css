@@ -1,7 +1,23 @@
-ul{
+.nav{
   position: fixed;
   top: 0;
   width: 100%;
+  overflow: hidden;
+}
+
+.nav a{
+  float: left;
+  display: block;
+  padding: 14px 16px;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -11,7 +27,6 @@ ul{
 li {
   float: left;
   margin: auto;
-
 }
 
 li:last-child {
@@ -34,5 +49,3 @@ li a:hover:not(.active) {
 .active {
   background-color: #f9c784;
 }
-
-
