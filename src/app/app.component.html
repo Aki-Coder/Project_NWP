@@ -1,31 +1,5 @@
-<div class="nav">
-  <ul>
-    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <a routerLink="/">Home</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['showall']" *ngIf="isAutenticicated"
-        >All meals from the restaurant</a
-      >
-    </li>
-    <li routerLinkActive="active">
-      <a routerLink="/showone" *ngIf="isAutenticicated">Meal details</a>
-    </li>
-    <li routerLinkActive="active">
-      <a routerLink="/basket" *ngIf="isAutenticicated">Shopping basket</a>
-    </li>
-    <li routerLinkActive="active" style="float: right;">
-      <a [routerLink]="['/auth']" *ngIf="!isAutenticicated">Authencitaion</a>
-    </li>
-    <li
-      routerLinkActive="active"
-      style="float: right;"
-      *ngIf="isAutenticicated"
-    >
-      <a (click)="onLogout()">Logout</a>
-    </li>
-  </ul>
-</div>
+<app-navbar></app-navbar>
+
 <div style="height: 1000px;">
   <router-outlet></router-outlet>
 </div>

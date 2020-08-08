@@ -10,25 +10,16 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'projnwp';
 
-  isAutenticicated = false;
-  userSub : Subscription;
 
-  constructor(private authSerice : AuthService){
+  constructor(){
 
   }
 
   ngOnInit(){
-    this.userSub = this.authSerice.user.subscribe(user=>{
-      this.isAutenticicated = !!user;
-    });
-    this.authSerice.autoLogin();
+
   }
 
   ngOnDestroy(){
-    this.userSub.unsubscribe();
-  }
 
-  onLogout(){
-    this.authSerice.logout();
   }
 }

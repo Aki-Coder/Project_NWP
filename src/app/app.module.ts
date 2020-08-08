@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
 import { AuthGard } from './auth/logging/logging.guard';
 import { AuthService } from './auth/logging/logging.service';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
 
 
 
@@ -34,7 +35,8 @@ import { AuthService } from './auth/logging/logging.service';
     BasketComponent,
     LoadingSpinnerComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent
 
 
   ],
