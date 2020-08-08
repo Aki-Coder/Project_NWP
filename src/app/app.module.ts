@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
@@ -17,6 +20,7 @@ import { FooterComponent } from './footer/footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
 import { AuthGard } from './auth/logging/logging.guard';
 import { AuthService } from './auth/logging/logging.service';
+
 
 
 
@@ -38,7 +42,10 @@ import { AuthService } from './auth/logging/logging.service';
     BrowserModule,
     AppRouting,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
+
 
   ],
   providers: [
