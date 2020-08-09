@@ -1,6 +1,6 @@
 export class Meals{
   constructor(
-    public id: string,
+    public id: number,
     public name: string,
     public imagePath:string,
     public description: string,

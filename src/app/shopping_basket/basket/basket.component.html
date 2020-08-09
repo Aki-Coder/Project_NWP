@@ -1,1 +1,110 @@
-<h2>sndakk</h2>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="main">
+  <div class="container">
+    <div class="title">
+      <h2>Fill the order</h2>
+    </div>
+    <div class="d-flex">
+      <form action="" method="">
+        <label>
+          <span class="fname">First Name <span class="required">*</span></span>
+          <input type="text" name="fname" />
+        </label>
+        <label>
+          <span class="lname">Last Name <span class="required">*</span></span>
+          <input type="text" name="lname" />
+        </label>
+        <label>
+          <span>Country <span class="required">*</span></span>
+          <select name="selection">
+            <option value="select">Select a country...</option>
+            <option value="BIH">Bosnia and Herzegovina</option>
+            <option value="SRB">Serbia</option>
+          </select>
+        </label>
+        <label>
+          <span>Street Address <span class="required">*</span></span>
+          <input
+            type="text"
+            name="houseadd"
+            placeholder="House number and street name"
+            required
+          />
+        </label>
+        <label>
+          <span>&nbsp;</span>
+          <input
+            type="text"
+            name="apartment"
+            placeholder="Apartment, suite, unit etc. (optional)"
+          />
+        </label>
+        <label>
+          <span>Town / City <span class="required">*</span></span>
+          <input type="text" name="city" />
+        </label>
+        <label>
+          <span>Phone <span class="required">*</span></span>
+          <input type="tel" name="city" />
+        </label>
+        <label>
+          <span>Email Address <span class="required">*</span></span>
+          <input type="email" name="city" />
+        </label>
+      </form>
+      <div class="Yorder">
+        <table>
+          <tr>
+            <th colspan="2">Your order</th>
+          </tr>
+          <tr>
+            <td>Product Name x 2(Qty)</td>
+            <td>$88.00</td>
+          </tr>
+          <tr>
+            <td>Subtotal</td>
+            <td>$88.00</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Free shipping</td>
+          </tr>
+        </table>
+        <br />
+        <div>
+          <input type="radio" name="dbt" value="dbt" checked /> Direct Bank
+          Transfer
+        </div>
+        <p>
+          Make your payment directly into our bank account. Please use your
+          Order ID as the payment reference. Your order will not be shipped
+          until the funds have cleared in our account.
+        </p>
+        <div><input type="radio" name="dbt" value="cd" /> Cash on Delivery</div>
+        <div>
+          <input type="radio" name="dbt" value="cd" /> Paypal
+          <span>
+            <img
+              src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg"
+              alt=""
+              width="50"
+            />
+          </span>
+        </div>
+        <button class="btn">
+          <p>Place Order</p>
+
+          <span
+            class="fa fa-check"
+            style="font-size: 20px; color: #f9c784;"
+          ></span>
+        </button>
+      </div>
+      <!-- Yorder -->
+    </div>
+  </div>
+</div>

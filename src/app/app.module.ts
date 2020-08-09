@@ -26,6 +26,7 @@ import { MealComponent } from './meal/meal-details/meal.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { MealComponent } from './meal/meal-details/meal.component';
     LoadingSpinnerComponent,
     FooterComponent,
     PageNotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
 
 
   ],

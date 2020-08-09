@@ -9,7 +9,7 @@
       >
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/showone',null]" *ngIf="isAutenticicated">Meal details</a>
+      <a [routerLink]="['/showone',-1]" *ngIf="isAutenticicated">Meal picture</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['/basket']" *ngIf="isAutenticicated">Shopping basket</a>
