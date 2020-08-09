@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/logging/logging.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,10 +12,10 @@ import { AuthService } from 'src/app/auth/logging/logging.service';
 })
 export class NavbarComponent implements OnInit,OnDestroy{
 
-  isAutenticicated = false;
-  userSub : Subscription;
+  isAutenticicated: boolean = false;
+  private userSub : Subscription;
 
-  constructor(private authSerice : AuthService) { }
+  constructor(private authSerice : AuthService,private route: Router) { }
 
   ngOnInit() {
     this.userSub = this.authSerice.user.subscribe(user=>{
@@ -23,12 +24,13 @@ export class NavbarComponent implements OnInit,OnDestroy{
     this.authSerice.autoLogin();
   }
 
-  ngOnDestroy(){
-    this.userSub.unsubscribe();
-  }
-
   onLogout(){
     this.authSerice.logout();
+    this.route.navigate(['/auth']);
   }
+
+  ngOnDestroy(){
+    this.userSub.unsubscribe();
+   }
 
 }

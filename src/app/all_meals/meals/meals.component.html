@@ -1,4 +1,48 @@
-<div class="main">
-  <h2>Melas</h2>
-<button class= "button" (click)="onLoadMeal()">Show one meal</button>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<div class="main" style="position:inherit;">
+  <h2 class="big-heading">Dishes from the restaurant</h2>
+  <div class="table" *ngFor="let meal of meals" style="z-index:inherit">
+    <h2 class="heading">Name : {{ meal.name }}</h2>
+    <div class="block">
+      <p>Price</p>
+      <span class="price"
+        >{{ meal.price }}/
+        <sub>100 g</sub>
+      </span>
+      <br />
+    </div>
+    <div class="block">
+      <p>Description</p>
+      <sub>{{ meal.description }}</sub>
+      <br />
+    </div>
+    <div class="block">
+      <p>Category</p>
+      <sub>{{ meal.category }}</sub>
+      <br />
+    </div>
+    <div class="block">
+      <p>Kitchen</p>
+      <sub>{{ meal.kitchen }}</sub>
+      <br />
+    </div>
+    <div class="block">
+      <p>Restaurant</p>
+      <sub>{{ meal.restaurant }}</sub>
+      <br />
+    </div>
+    <div>
+      <button class="btn" (click)="onLoadMeal(meal.id)">
+        <p>Show details </p>
+        <span class="fa fa-info-circle" style="font-size:24px;color: #f9c784;"></span>
+      </button>
+    </div>
+
+  </div>
 </div>
+

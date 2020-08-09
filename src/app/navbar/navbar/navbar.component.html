@@ -1,7 +1,7 @@
-<div class="nav">
+<div class="nav" style="z-index: 1;">
   <ul>
     <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <a routerLink="/">Home</a>
+      <a [routerLink]="['/']">Home</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['showall']" *ngIf="isAutenticicated"
@@ -9,10 +9,10 @@
       >
     </li>
     <li routerLinkActive="active">
-      <a routerLink="/showone" *ngIf="isAutenticicated">Meal details</a>
+      <a [routerLink]="['/showone',null]" *ngIf="isAutenticicated">Meal details</a>
     </li>
     <li routerLinkActive="active">
-      <a routerLink="/basket" *ngIf="isAutenticicated">Shopping basket</a>
+      <a [routerLink]="['/basket']" *ngIf="isAutenticicated">Shopping basket</a>
     </li>
     <li routerLinkActive="active" style="float: right;">
       <a [routerLink]="['/auth']" *ngIf="!isAutenticicated">Authencitaion</a>
