@@ -12,7 +12,7 @@
       <a [routerLink]="['/showone',-1]" *ngIf="isAutenticicated">Meal picture</a>
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/basket']" *ngIf="isAutenticicated">Shopping basket</a>
+      <a [routerLink]="['/basket',-1]" *ngIf="isAutenticicated">Shopping basket</a>
     </li>
     <li routerLinkActive="active" style="float: right;">
       <a [routerLink]="['/auth']" *ngIf="!isAutenticicated">Authencitaion</a>

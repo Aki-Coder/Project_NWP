@@ -38,8 +38,8 @@ export class MealComponent implements OnInit, OnDestroy {
     })
   }
 
-  onBuyMeal(){
-    this.route.navigate(['/basket']);
+  onBuyMeal(id:number){
+    this.route.navigate(['/basket',id]);
   }
 
   ngOnDestroy(){

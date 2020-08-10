@@ -16,7 +16,7 @@ const appRouters: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'showall', component: MealsComponent},
   { path: 'showone/:id', component: MealComponent },
-  { path: 'basket', component: BasketComponent },
+  { path: 'basket/:id', component: BasketComponent },
   { path: 'auth', component: LoggingComponent },
   { path: '**', component: PageNotFoundComponent },
   // {path: '**', redirectTo: '/not-found', pathMatch: 'full'}

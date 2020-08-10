@@ -6,9 +6,10 @@
 
 <div class="main">
   <div *ngIf="meal" class="style">
+    <p class="text">{{meal.name}}</p>
     <img class="slika" [src]="meal.imagePath" alt="Slika"/>
     <div>
-      <button class="btn" (click)="onBuyMeal()">
+      <button class="btn" (click)="onBuyMeal(meal.id)">
         <p>Buy</p>
         <span
           class="fa fa-cart-plus"
