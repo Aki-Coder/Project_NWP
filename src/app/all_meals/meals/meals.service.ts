@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Meals } from 'src/models/meals-details.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 

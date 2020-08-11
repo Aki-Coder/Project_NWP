@@ -8,19 +8,33 @@
     <div class="title">
       <h2>Fill the order</h2>
     </div>
+   <div>
     <div class="d-flex">
-      <form action="" method="">
+      <form
+      #dataF = "ngForm"
+      (ngSubmit)="save(dataF)" >
         <label>
           <span class="fname">First Name <span class="required">*</span></span>
-          <input type="text" name="fname" />
+          <input
+          type="text"
+          ngModel
+          name="fname"
+          required
+           />
         </label>
         <label>
           <span class="lname">Last Name <span class="required">*</span></span>
-          <input type="text" name="lname" />
+          <input
+          type="text"
+          name="lname"
+          ngModel
+          required/>
         </label>
         <label>
           <span>Country <span class="required">*</span></span>
-          <select name="selection">
+          <select
+          name="selection"
+          [ngModel]="defaultSelected">
             <option value="select">Select a country...</option>
             <option value="BIH">Bosnia and Herzegovina</option>
             <option value="SRB">Serbia</option>
@@ -31,30 +45,46 @@
           <input
             type="text"
             name="houseadd"
+            ngModel
             placeholder="House number and street name"
             required
           />
         </label>
         <label>
-          <span>&nbsp;</span>
-          <input
-            type="text"
-            name="apartment"
-            placeholder="Apartment, suite, unit etc. (optional)"
-          />
-        </label>
-        <label>
           <span>Town / City <span class="required">*</span></span>
-          <input type="text" name="city" />
+          <input
+          type="text"
+          name="city"
+          ngModel
+          required />
         </label>
         <label>
           <span>Phone <span class="required">*</span></span>
-          <input type="tel" name="city" />
+          <input
+          type="tel"
+          name="city"
+          ngModel
+          required/>
         </label>
         <label>
           <span>Email Address <span class="required">*</span></span>
-          <input type="email" name="city" />
-        </label>
+          <input
+          type="email"
+          name="email"
+          ngModel
+          required
+          email/>
+        </label><br>
+        <button
+        class="btn"
+        type="submit"
+        [disabled]="!dataF.valid">
+          <p>Place Order</p>
+          <span
+            class="fa fa-check"
+            style="font-size: 20px; color: #f9c784;"
+          ></span>
+        </button>
       </form>
       <div class="Yorder">
         <table *ngIf="meal">
@@ -74,15 +104,8 @@
         <p>
           Payment of the order is made on the spot.
         </p>
-        <button class="btn" (click)="saveOrder()">
-          <p>Place Order</p>
-          <span
-            class="fa fa-check"
-            style="font-size: 20px; color: #f9c784;"
-          ></span>
-        </button>
+
       </div>
       <!-- Yorder -->
     </div>
-  </div>
-</div>
+   </div>

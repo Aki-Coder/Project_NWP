@@ -30,7 +30,9 @@
           placeholder="Enter Email"
           required
           email
-        />
+          #email="ngModel"
+          />
+          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a vaid email</span>
       </div>
 
       <br />
