@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from 'src/environments/environment';
 
 import { AppComponent } from './app.component';
@@ -14,7 +14,7 @@ import { MealsComponent } from './all_meals/meals/meals.component';
 import { BasketComponent } from './shopping_basket/basket/basket.component';
 import { AppRouting } from './app-routing.module';
 
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './spinner/loading-spinner/loading-spinner.component';
 import { FooterComponent } from './footer/footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
@@ -22,9 +22,7 @@ import { AuthGard } from './auth/logging/logging.guard';
 import { AuthService } from './auth/logging/logging.service';
 import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { MealComponent } from './meal/meal-details/meal.component';
-
-
-
+import { AuthInterceptorService } from './auth/logging/logging-interseptor';
 
 
 @NgModule({
@@ -39,8 +37,6 @@ import { MealComponent } from './meal/meal-details/meal.component';
     FooterComponent,
     PageNotFoundComponent,
     NavbarComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -51,12 +47,12 @@ import { MealComponent } from './meal/meal-details/meal.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
 
-
   ],
   providers: [
     AuthGard,
-    AuthService
-],
-  bootstrap: [AppComponent]
+    AuthService,
+    //{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true}
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

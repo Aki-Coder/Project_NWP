@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
-import {throwError, Subject} from 'rxjs';
+import {throwError, Subject, BehaviorSubject} from 'rxjs';
 import { User } from './user-model';
 import { Router } from '@angular/router';
 
@@ -20,9 +20,9 @@ export interface AuthResponseData{
   providedIn : 'root'
 })
 
-export class AuthService{
+export class AuthService {
 
-  user = new Subject<User>();
+  public user = new BehaviorSubject<User>(null);
   private tokenExpirationTimer: any;
 
   constructor(private http : HttpClient,

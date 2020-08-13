@@ -75,7 +75,7 @@
           required
           email/>
         </label><br>
-        <button
+        <button (click)="show()"
         class="btn"
         type="submit"
         [disabled]="!dataF.valid"
@@ -86,6 +86,7 @@
             style="font-size: 20px; color: #f9c784;"
           ></span>
         </button>
+        <br><br>
       </form>
       <div class="Yorder">
         <table *ngIf="meal">

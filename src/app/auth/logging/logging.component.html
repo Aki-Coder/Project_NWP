@@ -16,10 +16,10 @@
       *ngIf="!isLoading"
       class="formStyle"
     >
-    <div class="imgcontainer">
-      <img src="assets/images/logo.jpg" class="avatar">
-    </div>
-    <p><b>Fill out the form</b></p>
+      <div class="imgcontainer">
+        <img src="assets/images/logo.jpg" class="avatar" />
+      </div>
+      <p><b>Fill out the form</b></p>
       <label for="email"><b style="color: #f9c784;">Email :</b> </label>
       <div class="col-75">
         <input
@@ -31,8 +31,10 @@
           required
           email
           #email="ngModel"
-          />
-          <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a vaid email</span>
+        />
+        <span class="help-block" *ngIf="!email.valid && email.touched"
+          >Please enter a vaid email</span
+        >
       </div>
 
       <br />

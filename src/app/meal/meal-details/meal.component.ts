@@ -15,39 +15,39 @@ export class MealComponent implements OnInit, OnDestroy {
   mealsSub: Subscription;
   meals: Meals[];
 
-  meal :Meals;
+  meal: Meals;
 
-  constructor(private activeRoute: ActivatedRoute,private route:Router, private service: MealsService) {
-     this.mealSub = this.activeRoute.params.subscribe((data: any) => {
-      if (data.id !== "-1")  {
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private route: Router,
+    private service: MealsService
+  ) {
+    this.mealSub = this.activeRoute.params.subscribe((data: any) => {
+      if (data.id !== '-1') {
         this.mealId = +data.id;
         console.log(data);
-      }else
-        this.mealId = null;
+      } else this.mealId = null;
     });
   }
 
   ngOnInit(): void {
-    this.mealsSub = this.service.getMeals().subscribe((mealsArray:Meals[])=>{
+    this.mealsSub = this.service.getMeals().subscribe((mealsArray: Meals[]) => {
       this.meals = mealsArray;
-      this.meals.forEach(element => {
-        if(element.id == this.mealId){
+      this.meals.forEach((element) => {
+        if (element.id == this.mealId) {
           this.meal = element;
           console.log(element);
         }
       });
-    })
+    });
   }
 
-  onBuyMeal(id:number){
-    this.route.navigate(['/basket',id]);
+  onBuyMeal(id: number) {
+    this.route.navigate(['/basket', id]);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.mealSub.unsubscribe();
     this.mealsSub.unsubscribe();
   }
-
-  }
-
-
+}
