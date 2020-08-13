@@ -1,6 +1,6 @@
 export class Order {
   constructor(
-    public id: number,
+    //public id: number,
     public name: string,
     public surname: string,
     public country: string,
@@ -8,7 +8,5 @@ export class Order {
     public city: string,
     public phone: number,
     public email: string,
-    public foodName: string,
-    public foodPrice: number
   ) {}
 }

@@ -33,6 +33,7 @@ export class MealComponent implements OnInit, OnDestroy {
       this.meals.forEach(element => {
         if(element.id == this.mealId){
           this.meal = element;
+          console.log(element);
         }
       });
     })

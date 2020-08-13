@@ -62,7 +62,7 @@
           <span>Phone <span class="required">*</span></span>
           <input
           type="tel"
-          name="city"
+          name="phone"
           ngModel
           required/>
         </label>
@@ -78,7 +78,8 @@
         <button
         class="btn"
         type="submit"
-        [disabled]="!dataF.valid">
+        [disabled]="!dataF.valid"
+        >
           <p>Place Order</p>
           <span
             class="fa fa-check"
