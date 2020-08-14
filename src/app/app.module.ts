@@ -51,7 +51,7 @@ import { AuthInterceptorService } from './auth/logging/logging-interseptor';
   providers: [
     AuthGard,
     AuthService,
-    //{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true}
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi:true}
   ],
   bootstrap: [AppComponent],
 })
