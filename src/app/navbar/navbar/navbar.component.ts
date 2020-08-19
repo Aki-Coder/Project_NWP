@@ -4,33 +4,30 @@ import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/auth/logging/logging.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements OnInit,OnDestroy{
-
+export class NavbarComponent implements OnInit, OnDestroy {
   isAutenticicated: boolean = false;
-  private userSub : Subscription;
+  private userSub: Subscription;
 
-  constructor(private authSerice : AuthService,private route: Router) { }
+  constructor(private authSerice: AuthService, private route: Router) {}
 
   ngOnInit() {
-    this.userSub = this.authSerice.user.subscribe(user=>{
+    this.userSub = this.authSerice.user.subscribe((user) => {
       this.isAutenticicated = !!user;
     });
     this.authSerice.autoLogin();
   }
 
-  onLogout(){
+  onLogout() {
     this.authSerice.logout();
     this.route.navigate(['/auth']);
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.userSub.unsubscribe();
-   }
-
+  }
 }

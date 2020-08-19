@@ -14,9 +14,9 @@ import { MealComponent } from './meal/meal-details/meal.component';
 const appRouters: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'showall', component: MealsComponent, canActivate:[AuthGard] },
-  { path: 'showone/:id', component: MealComponent,canActivate:[AuthGard] },
-  { path: 'basket/:id', component: BasketComponent,canActivate:[AuthGard] },
+  { path: 'showall', component: MealsComponent, canActivate: [AuthGard] },
+  { path: 'showone/:id', component: MealComponent, canActivate: [AuthGard] },
+  { path: 'basket/:id', component: BasketComponent, canActivate: [AuthGard] },
   { path: 'auth', component: LoggingComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

@@ -7,6 +7,9 @@ import { OrderService } from './order.service';
 import { Order } from 'src/models/order.model';
 import { NgForm } from '@angular/forms';
 
+
+
+
 @Component({
   selector: 'app-basket',
   templateUrl: './basket.component.html',
@@ -23,7 +26,8 @@ export class BasketComponent implements OnInit, OnDestroy {
   orders: Order[];
   orderSub: Subscription;
 
-  title:string;
+  title: string;
+
 
 
   constructor(
@@ -62,18 +66,19 @@ export class BasketComponent implements OnInit, OnDestroy {
       form.value.email
     );
 
+    this.orders = [];
 
-    this.orderSub = this.orderService.saveOrder(orderO).subscribe(orderO => {
+    this.orderSub = this.orderService.saveOrder(orderO).subscribe((orderO) => {
       console.log(form.value);
       this.orders.push(orderO);
-
     });
     form.reset();
   }
 
-  show(){
-    console.log("Bravo");
+  show() {
+    console.log('Bravo');
     alert('Successfully ordered');
+
   }
 
   ngOnDestroy() {

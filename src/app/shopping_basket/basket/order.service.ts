@@ -4,16 +4,15 @@ import { Order } from 'src/models/order.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn:"root"
+  providedIn: 'root',
 })
-export class OrderService{
+export class OrderService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient){}
-
-  saveOrder(order:Order){
-    return this.http.post<Order>("https://auth-b38cc.firebaseio.com/order"+ ".json",order);
+  saveOrder(order: Order) {
+    return this.http.post<Order>(
+      'https://auth-b38cc.firebaseio.com/order' + '.json',
+      order
+    );
   }
-
-
-
 }

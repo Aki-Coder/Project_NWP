@@ -1,18 +1,22 @@
 <div class="nav" style="z-index: 1;">
   <ul>
     <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['/']"><img src="/assets/images/hom.png" alt="" style="height: 20px;"> Home</a>
     </li>
     <li routerLinkActive="active">
       <a [routerLink]="['showall']" *ngIf="isAutenticicated"
-        >All meals from the restaurant</a
+        ><img src="/assets/images/lunch.png" alt="" style="height: 30px;"> All meals from the restaurant</a
       >
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/showone',-1]" *ngIf="isAutenticicated">Meal picture</a>
+      <a [routerLink]="['/showone', -1]" *ngIf="isAutenticicated"
+        > <img src="/assets/images/photo.png" alt="" style="height: 20px;"> Meal picture</a
+      >
     </li>
     <li routerLinkActive="active">
-      <a [routerLink]="['/basket',-1]" *ngIf="isAutenticicated">Shopping basket</a>
+     <a [routerLink]="['/basket', -1]" *ngIf="isAutenticicated"
+     > <img src="/assets/images/supermarket.png" alt="" style="height: 30px;"> Shopping basket</a
+   >
     </li>
     <li routerLinkActive="active" style="float: right;">
       <a [routerLink]="['/auth']" *ngIf="!isAutenticicated">Authencitaion</a>
@@ -22,9 +26,7 @@
       style="float: right;"
       *ngIf="isAutenticicated"
     >
-      <a (click)="onLogout()">Logout</a>
+      <a (click)="onLogout()"> <img src="/assets/images/logout.png" alt="" style="height: 20px;"> Logout</a>
     </li>
   </ul>
 </div>
-
-
